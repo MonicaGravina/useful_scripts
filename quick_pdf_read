@@ -1,0 +1,8 @@
+#Importing python packages
+import tabula
+
+#Reading file and generating tables
+file = "RT-17_Anexo 1 Ecotoxicologia.pdf"
+table = tabula.read_pdf(file,pages=357, spreadsheet=True)
+table = table.dropna()
+table
